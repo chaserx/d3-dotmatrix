@@ -58,8 +58,8 @@ module.exports = function DotMatrixChart(dataset,options){
 
     var numberOfLines = maxNoOfLinesInGroup * uniqueGroups.length;
 
-    var groupScale = d3.scale.ordinal().domain(uniqueGroups).rangePoints([0, uniqueGroups.length-1]);
-    var categoryScale = d3.scale.ordinal().domain(uniqueCategories).rangePoints([0, uniqueCategories.length]);
+    var groupScale = d3.scaleOrdinal().domain(uniqueGroups).rangePoints([0, uniqueGroups.length-1]);
+    var categoryScale = d3.scaleOrdinal().domain(uniqueCategories).rangePoints([0, uniqueCategories.length]);
 
     var color = d3.scale.category20();
 
@@ -70,8 +70,8 @@ module.exports = function DotMatrixChart(dataset,options){
     width = (dotRadius*2 + dotPaddingLeft + dotPaddingRight) * noOfCirclesInARow;
 
     // Set the ranges
-    var	xScale = d3.scale.linear().range([margin.left, width]);
-    var	yScale = d3.scale.linear().range([height, margin.bottom]);
+    var	xScale = d3.scaleLinear().range([margin.left, width]);
+    var	yScale = d3.scaleLinear().range([height, margin.bottom]);
 
     var xAxis = d3.svg.axis()
           .scale(xScale)
