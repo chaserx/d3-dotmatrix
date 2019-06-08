@@ -1,3 +1,5 @@
+import * as d3 from "d3";
+
 module.exports = function DotMatrixChart(dataset,options){
     var dotRadius = options.dot_radius;
     var noOfCirclesInARow = options.no_of_circles_in_a_row;
