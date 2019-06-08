@@ -1,6 +1,6 @@
 {
   "name": "@chaserx/d3-dotmatrix",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Open Source Javascript library to render Dot Matrix Charts",
   "main": "dist/DotMatrix.js",
   "scripts": {
