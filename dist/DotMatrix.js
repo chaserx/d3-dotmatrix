@@ -61,7 +61,7 @@ module.exports = function DotMatrixChart(dataset,options){
     var groupScale = d3.scaleOrdinal().domain(uniqueGroups).range([0, uniqueGroups.length-1]);
     var categoryScale = d3.scaleOrdinal().domain(uniqueCategories).range([0, uniqueCategories.length]);
 
-    var color = d3.scaleOrdinal(d3.schemeCategory20);
+    var color = d3.schemeCategory20;
 
     // Set the dimensions of the canvas / graph
     var	margin = {top: dotRadius*10, right: dotRadius*15, bottom: dotRadius*10, left: dotRadius*15};
