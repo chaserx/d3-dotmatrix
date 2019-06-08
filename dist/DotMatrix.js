@@ -73,17 +73,13 @@ module.exports = function DotMatrixChart(dataset,options){
     var	xScale = d3.scaleLinear().range([margin.left, width]);
     var	yScale = d3.scaleLinear().range([height, margin.bottom]);
 
-    var xAxis = d3.svg.axis()
-                      .scale(xScale)
-                      .orient("bottom");
+    var xAxis = d3.axisBottom().scale(xScale);
 
-    var yAxis = d3.svg.axis()
-                      .scale(yScale)
-                      .orient("left")
-                      .tickFormat(function (d) {
-                            return uniqueGroups[d];
-                      }).ticks(uniqueGroups.length)
-                        .tickSize(-width+margin.left-(dotRadius*2), 0, 0)
+    var yAxis = d3.axisLeft().scale(yScale)
+                             .tickFormat(function (d) {
+                                    return uniqueGroups[d];
+                             }).ticks(uniqueGroups.length)
+                               .tickSize(-width+margin.left-(dotRadius*2), 0, 0)
 
 
     xScale.domain([0,noOfCirclesInARow]);
