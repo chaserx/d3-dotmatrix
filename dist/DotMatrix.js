@@ -58,8 +58,8 @@ module.exports = function DotMatrixChart(dataset,options){
 
     var numberOfLines = maxNoOfLinesInGroup * uniqueGroups.length;
 
-    var groupScale = d3.scaleOrdinal().domain(uniqueGroups).rangePoints([0, uniqueGroups.length-1]);
-    var categoryScale = d3.scaleOrdinal().domain(uniqueCategories).rangePoints([0, uniqueCategories.length]);
+    var groupScale = d3.scaleOrdinal().domain(uniqueGroups).range([0, uniqueGroups.length-1]);
+    var categoryScale = d3.scaleOrdinal().domain(uniqueCategories).range([0, uniqueCategories.length]);
 
     var color = d3.scale.category20();
 
