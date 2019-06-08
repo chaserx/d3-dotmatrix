@@ -1,5 +1,4 @@
-function DotMatrixChart(dataset,options){
-
+module.exports = function DotMatrixChart(dataset,options){
     var dotRadius = options.dot_radius;
     var noOfCirclesInARow = options.no_of_circles_in_a_row;
     var dotPaddingLeft = options.dot_padding_left;

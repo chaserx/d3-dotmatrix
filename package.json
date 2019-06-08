@@ -1,0 +1,31 @@
+{
+  "name": "@chaserx/d3-dotmatrix",
+  "version": "1.0.0",
+  "description": "Open Source Javascript library to render Dot Matrix Charts",
+  "main": "dist/DotMatrix.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chaserx/d3-dotmatrix.git"
+  },
+  "keywords": [
+    "dotmatrix",
+    "dot-matrix",
+    "d3",
+    "d3.js",
+    "visualization",
+    "charts",
+    "open-source"
+  ],
+  "author": "Arpit Narechania and Chase Southard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chaserx/d3-dotmatrix/issues"
+  },
+  "homepage": "https://github.com/chaserx/d3-dotmatrix#readme",
+  "dependencies": {
+    "d3": "^5.9.2"
+  }
+}
