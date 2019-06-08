@@ -1,4 +1,4 @@
-import * as d3 from "d3";
+var d3 = require("d3");
 
 module.exports = function DotMatrixChart(dataset,options){
     var dotRadius = options.dot_radius;
