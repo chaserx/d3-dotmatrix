@@ -61,7 +61,7 @@ module.exports = function DotMatrixChart(dataset,options){
     var groupScale = d3.scaleOrdinal().domain(uniqueGroups).range([0, uniqueGroups.length-1]);
     var categoryScale = d3.scaleOrdinal().domain(uniqueCategories).range([0, uniqueCategories.length]);
 
-    var color = d3.scale.category20();
+    var color = d3.scaleOrdinal(d3.schemeCategory20);
 
     // Set the dimensions of the canvas / graph
     var	margin = {top: dotRadius*10, right: dotRadius*15, bottom: dotRadius*10, left: dotRadius*15};
@@ -74,17 +74,16 @@ module.exports = function DotMatrixChart(dataset,options){
     var	yScale = d3.scaleLinear().range([height, margin.bottom]);
 
     var xAxis = d3.svg.axis()
-          .scale(xScale)
-          .orient("bottom");
+                      .scale(xScale)
+                      .orient("bottom");
 
     var yAxis = d3.svg.axis()
-                .scale(yScale)
-                .orient("left")
-                .tickFormat(function (d) {
-                    return uniqueGroups[d];
-                })
-                .ticks(uniqueGroups.length)
-                .tickSize(-width+margin.left-(dotRadius*2), 0, 0)
+                      .scale(yScale)
+                      .orient("left")
+                      .tickFormat(function (d) {
+                            return uniqueGroups[d];
+                      }).ticks(uniqueGroups.length)
+                        .tickSize(-width+margin.left-(dotRadius*2), 0, 0)
 
 
     xScale.domain([0,noOfCirclesInARow]);
